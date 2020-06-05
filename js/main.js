@@ -1,20 +1,21 @@
-
-
 function jobFilter() {
-    var frontEnd = document.getElementsByClassName("front-end-job");
+    var frontEnd = document.getElementById("front-end-job");
   var css =
-  document.getElementsByClassName("css-job");
+  document.getElementById("css-job");
   var js =
-  document.getElementsByClassName("js-job");
+  document.getElementById("js-job");
   
   var frontEndFilter = document.getElementById("front-end-button");
   var cssFilter = document.getElementById("css-button");
   var jsFilter = document.getElementById("js-button");
   
   var test = document.getElementById("testing-content");
-    if(frontEndFilter.checked === true) {
-      test.innerHTML = "is this thing on?"
+    if(jsFilter.checked === true) {
+      frontEnd.style.display = "none";
+      css.style.display = "none";
+      js.style.display = "inherit";
     } else {
-      test.innerHTML = "it's on, and it's working!"
+      css.style.display = "none";
+      js.style.display = "none";
     }
   }
