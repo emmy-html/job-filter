@@ -12,12 +12,13 @@ function hideJobs(type) {
     type[i].style.display = "none";
   }
 }
-// selects all elements with class name corresponding with job type
-let frontEndJobs = document.querySelectorAll(".front-end-job");
-let cssJobs = document.querySelectorAll(".css-job");
-let jsJobs = document.querySelectorAll(".js-job");
-// function that filters jobs when checkboxes are clicked
+
+// function that filters jobs by type when checkboxes are clicked
 function jobFilter() {
+  // selects all elements with class name corresponding with job type
+  var frontEndJobs = document.querySelectorAll(".front-end-job");
+  var cssJobs = document.querySelectorAll(".css-job");
+  var jsJobs = document.querySelectorAll(".js-job");
   // selects checkboxes for job type
   var frontEndFilter = document.getElementById("front-end-button").checked;
   var cssFilter = document.getElementById("css-button").checked;
@@ -89,4 +90,12 @@ function clearResults() {
   listJobs(frontEndJobs);
   listJobs(cssJobs);
   listJobs(jsJobs);
+}
+
+function typeFilter() {
+  var frontEndJobs = document.querySelectorAll(".front-end-job");
+  var seniorLvl = document.querySelectorAll(".senior-level");
+  
+  hideJobs(frontEndJobs);
+  hideJobs(seniorLvl);
 }
